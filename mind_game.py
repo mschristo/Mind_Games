@@ -45,6 +45,7 @@ my_game = Game()
 
 pygame.display.update()
 balls = []
+print(10)
 y=1
 for i in range(6):
     if i>2 : y=2
