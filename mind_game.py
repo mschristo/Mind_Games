@@ -46,7 +46,7 @@ my_game = Game()
 pygame.display.update()
 balls = []
 y=1
-
+t=10
 for i in range(6):
     if i>2 : y=2
     balls.append(Lamp(i,50*i,50*y,30,30,"ball.png","basketball.png",False))
