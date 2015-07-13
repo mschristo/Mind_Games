@@ -25,19 +25,8 @@ class Game():
                   (str(Game.score), True, (0,0,0), (155,255,255))  
         surf.blit(my_text, (720, 20))
         
-class Button(Sprite):
-    def __init__(self, pos_x, pos_y, dim_x, dim_y):
-        self.pos_x = pos_x
-        self.pos_y = pos_y
-        self.dim_x = dim_x
-        self.dim_y = dim_y
-        self.rect=pygame.Rect(pos_x, pos_y, dim_x, dim_y)     # ορθογώνιο rect της κλάσης Ball
-        self.color=pygame.image.load()                # εικόνα image της κλάσης Ball
 
-    def is_clisked(self):
-        return self.rect.collidepoint(self,pygame.mouse.get_pos())
-
-# Υποκλάση Ball
+# Υποκλάση Lamp
 class Lamp(Sprite):
     def __init__(self, id, createX, createY, dimX, dimY, color, high_color, is_high=False):
         Sprite.__init__(self)
@@ -53,6 +42,11 @@ class Lamp(Sprite):
         else:
             surf.blit(self.simple_color, self.rect)
 
+    def make_highlight(self):
+        self.is_high=True
+
+    def make_simple(self):
+        self.is_high=False
 
 
 
